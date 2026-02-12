@@ -100,32 +100,15 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Requests.cs">
-      <DependentUpon>TMPC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="status.cs">
-      <DependentUpon>TMPC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TMPC.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TMPC.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TMPC.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TMPC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TMPC.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TMPC.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>TMPC.tt</DependentUpon>
-    </Compile>
+    <Compile Include="ServerConnection.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +130,9 @@
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,28 +152,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="TMPC.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TMPC.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="TMPC.edmx.diagram">
-      <DependentUpon>TMPC.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TMPC.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TMPC.edmx</DependentUpon>
-      <LastGenOutput>TMPC.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="TMPC.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TMPC.edmx</DependentUpon>
-      <LastGenOutput>TMPC.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
