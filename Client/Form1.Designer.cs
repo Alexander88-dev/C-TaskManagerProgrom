@@ -73,6 +73,7 @@
             this.linkLabel.TabIndex = 3;
             this.linkLabel.TabStop = true;
             this.linkLabel.Text = "Регистрация";
+            this.linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_LinkClicked);
             // 
             // label2
             // 

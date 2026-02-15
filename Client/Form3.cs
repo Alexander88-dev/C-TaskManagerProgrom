@@ -15,6 +15,16 @@ namespace Client
         public MainForm()
         {
             InitializeComponent();
+            if ()
+            {
+            
+            
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
