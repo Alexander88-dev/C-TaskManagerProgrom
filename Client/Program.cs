@@ -13,10 +13,10 @@ namespace Client
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static async Task Main()
         {
             connection = new ServerConnection();
-            connection.Connect();
+            await connection.ConnectAsync();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

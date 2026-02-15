@@ -27,24 +27,42 @@ namespace Client
             Program.connection.Close();
         }
 
-        private void btn_Click(object sender, EventArgs e)
+        private async void btn_Click(object sender, EventArgs e)
         {
             string login = txtB1.Text;
-            string passwoed = txtB2.Text;
+            string password = txtB2.Text;
 
-            string responce = Program.connection.Send($"LOGIN|{login}|{passwoed}");
-            switch (responce) 
+            string response = await Program.connection.SendAsync($"LOGIN|{login}|{password}");
+
+            switch (response)
             {
                 case "NOT_FOUND":
-                    MessageBox.Show("Не введёт логин");
+                    MessageBox.Show("Не найден пользователь с таким логином");
                     break;
                 case "WRONG_PASSWORD":
-                    MessageBox.Show("Не введёт пароль");
+                    MessageBox.Show("Найден пользователь, но не верный пароль");
                     break;
                 case "SUCCESS":
-                    MessageBox.Show("Вход испешен");
+                    MainForm mainForm = new MainForm();
+
+                    mainForm.FormClosing += (s, args) =>
+                    {
+                        this.Show();
+                        txtB2.Clear();
+                    };
+
+                    mainForm.Show();
+                    this.Hide();
+                    
                     break;
             }
+        }
+
+        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.ShowDialog();
         }
     }
 }
