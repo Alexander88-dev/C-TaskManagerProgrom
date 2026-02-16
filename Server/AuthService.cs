@@ -1,6 +1,7 @@
 ﻿using Server;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ public static class AuthService
             return "SUCCESS";
         }
     }
+    
     public static async Task<string> LoginAsync(string username, string password)
     {
         using (var db = new TaskManagerEntities2())
@@ -45,6 +47,32 @@ public static class AuthService
             {
                 return "WRONG_PASSWORD";
             }
+
+            return "SUCCESS";
+        }
+    }
+    public static async Task<string> RegisterAsync(string username, string password, string email)
+    {
+        using (var db = new TaskManagerEntities2())
+        {
+            var user_exist = await db.Users.AnyAsync(u => u.username == username);
+
+            if (user_exist)
+            {
+                return "USER_EXISTS";
+            }
+
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
+
+            Users user = new Users()
+            {
+                username = username,
+                hash_password = passwordHash,
+                email = email,
+                lvl_security = 0
+            };
+            db.Users.Add(user);
+            await db.SaveChangesAsync();
 
             return "SUCCESS";
         }

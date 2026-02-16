@@ -51,6 +51,11 @@ namespace Server
                             string result = await AuthService.LoginAsync(parts[1], parts[2]);
                             await writer.WriteLineAsync(result);
                         }
+                        if (request.StartsWith("REGISTER")) 
+                        {
+                            string[] parts = request.Split('|');
+                            string res = await AuthService.RegisterAsync(parts[1], parts[2], parts[3]);
+                        }
                     }
                 }
             }
