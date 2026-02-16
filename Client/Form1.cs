@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class LoginForm : Form
+    public partial class Form : System.Windows.Forms.Form
     {
-        public LoginForm()
+        public Form()
         {
             InitializeComponent();
         }
@@ -60,9 +60,14 @@ namespace Client
 
         private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
             RegistrationForm registrationForm = new RegistrationForm();
-            registrationForm.ShowDialog();
+            registrationForm.FormClosing += (s, args) =>
+            {
+                this.Show();
+                txtB2.Clear();
+            };
+            registrationForm.Show();
+            this.Hide();
         }
     }
 }

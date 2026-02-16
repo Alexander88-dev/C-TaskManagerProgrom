@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class EditingAccountForm : Form
+    public partial class EditingAccountForm : System.Windows.Forms.Form
     {
         public EditingAccountForm()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void EditingAccountForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
