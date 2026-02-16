@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class LoginForm
+    partial class Form
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.txtB2.Size = new System.Drawing.Size(241, 26);
             this.txtB2.TabIndex = 4;
             // 
-            // LoginForm
+            // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@
             this.Controls.Add(this.txtB1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "LoginForm";
+            this.Name = "Form";
             this.Text = "LoginForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.LoginForm_Load);

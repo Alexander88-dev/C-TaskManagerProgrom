@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class RegistrationForm : Form
+    public partial class RegistrationForm : System.Windows.Forms.Form
     {
         public RegistrationForm()
         {
             InitializeComponent();
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

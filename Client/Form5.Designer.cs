@@ -60,6 +60,7 @@
             this.btn1.TabIndex = 2;
             this.btn1.Text = "Ок";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -69,11 +70,13 @@
             this.btn2.TabIndex = 3;
             this.btn2.Text = "Отменить";
             this.btn2.UseVisualStyleBackColor = true;
+            this.btn2.Click += new System.EventHandler(this.btn2_Click);
             // 
             // QueriesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(650, 379);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);

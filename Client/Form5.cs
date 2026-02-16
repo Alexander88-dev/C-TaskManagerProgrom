@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class QueriesForm : Form
+    public partial class QueriesForm : System.Windows.Forms.Form
     {
         public QueriesForm()
         {
@@ -25,6 +25,24 @@ namespace Client
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            EditingAccountForm editingAccountForm = new EditingAccountForm();
+
+            editingAccountForm.FormClosing += (s, args) =>
+            {
+                this.Show();
+            };
+
+            editingAccountForm.Show();
+            this.Hide();
         }
     }
 }

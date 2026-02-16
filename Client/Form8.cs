@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class RequestStatus : Form
+    public partial class RequestStatus : System.Windows.Forms.Form
     {
         public RequestStatus()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

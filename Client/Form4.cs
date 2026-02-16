@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form4 : Form
+    public partial class RequestAddForm : System.Windows.Forms.Form
     {
-        public Form4()
+        public RequestAddForm()
         {
             InitializeComponent();
+        }
+
+        private void RequestAddForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
