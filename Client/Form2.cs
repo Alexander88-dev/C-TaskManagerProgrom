@@ -75,7 +75,7 @@ namespace Client
             string email = txtB4.Text;
             if (ValidateFrom())
             {
-                string responce =  Program.connection.Send($"REGISTER|{login}|{password}|{email}");
+                string responce = await Program.connection.SendAsync($"REGISTER|{login}|{password}|{email}");
                 switch (responce)
                 {
                     case "SUCCESS":
