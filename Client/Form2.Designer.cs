@@ -117,6 +117,7 @@
             this.btn1.TabIndex = 8;
             this.btn1.Text = "Зарегистрироваться";
             this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click_1);
             // 
             // btn2
             // 

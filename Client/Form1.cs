@@ -64,6 +64,7 @@ namespace Client
             registrationForm.FormClosing += (s, args) =>
             {
                 this.Show();
+                txtB1.Clear();
                 txtB2.Clear();
             };
             registrationForm.Show();
